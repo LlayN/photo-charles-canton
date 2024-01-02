@@ -4,23 +4,28 @@
 html, body{
   padding: 0;
   margin: 0;
-  height: 100vh;
 }
 
-body{
+.home{
   width: auto;
   background-image: url(../images/photographer-1867417.jpg);
-  background-color: rgb(132, 0, 255);
+  background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 
 }
 
 :root{
-  --font-size : clamp(9px, 1.7vw, 10px);
+  --font-size : clamp(14px, 3vw, 17px);
   --font-family: 'Rubik', sans-serif;
 
+}
+
+a{
+  text-decoration: none;
+  color: rgb(204, 204, 204);
 }
 
 /* HEADER */
@@ -39,12 +44,12 @@ body{
 }
 
 .container_menu > ul > li{
-  color: white;
+  
   list-style: none;
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
   font-size: var(--font-size);
-  margin: 11px 0px 11px 0px;
+  margin: 11px 0px 13px 0px;
+  letter-spacing: 1px;
 }
 
 .menuList{
@@ -54,13 +59,80 @@ body{
 }
 
 .menuIcon{
-  width: clamp(17px, 2vw, 23px);
+  width: clamp(25px, 3vw, 34px);
 }
 
 .iconReseau{
   display: flex;
   justify-content: flex-end;
-  gap: 5px;
+  gap: 8px;
+  
+}
+
+.iconReseau > a > img{
+  width: clamp(20px, 3vw, 26px)
+}
+
+.active{
+  font-weight: 600;
+  color: white;
+  
+}
+
+.logo{
+  width: clamp(45px, 6vw, 70px);
+}
+
+/* PRESENTATION HOME */
+
+.middle{ 
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - (69px + 50px));
+  gap: 25px;
+  
 }
 
 
+
+.middle > div {
+  display: flex;
+  justify-content: center;
+}
+
+.middle > div > h1{
+  color: white;
+}
+
+.middle > div > p{
+  color: white;
+}
+
+.middle > div > h2{
+  color: white;
+}
+
+.middle div:nth-child(2){
+  flex-direction: column;
+  align-items: center ;
+}
+
+/* FOOTER */
+
+footer{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+footer > div > p{
+  color: white;
+}
